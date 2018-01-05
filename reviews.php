@@ -11,6 +11,8 @@
       if ($result) {
          $f = '<style>.right {width: 60%; margin-left: 35%; zoom: 80%}</style><div class="right"><h2>Добавить ещё один отзыв...</h2></div>';
          $i = '<h3>Данные успешно вставлены!</h3>';
+         $f = fopen('log.txt', 'a'); fwrite($f, $conn -> lastInsertId());
+         fwrite($f, "\n"); fclose($f);
       } else {
          $i = '<h4>Что-то не так!</h4>';
       }
