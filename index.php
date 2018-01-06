@@ -19,8 +19,6 @@
          $f = '<style>.right {width: 60%; margin-left: 35%; zoom: 80%}</style>';
          $f .= '<div class="right"><h2>Добавить ещё один отзыв...</h2></div>';
          $i = '<h3>Данные успешно добавлены, спасибо!</h3>';
-         $log = fopen('log.txt', 'a'); fwrite($log, $conn -> lastInsertId());
-         fwrite($log, "\n"); fclose($log);
       } else {
          $i = '<h4>Что-то не так!</h4>';
       }
